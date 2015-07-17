@@ -52,10 +52,21 @@ Channel.prototype.start = function() {
 	// usernames which are currently connected to the chat
 	var usernames = {};
 	var numUsers = 0;
+	var queue = [];
 
 	io.on('connection', function (socket) {
 		var addedUser = false;
 		socket.channel = [];
+
+	io.on('push', function(msg) {
+		queue.push(msg);
+		socket.broadcast.emit('knock', {});
+	});
+	io.on('pop', function(msg) {
+		var m = queue.pop();
+		socket.emit('job', m);
+	});
+
 		// when the client emits 'new message', this listens and executes
 		socket.on('new message', function (data) {
 			var msg = {
