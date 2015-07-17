@@ -16,3 +16,6 @@ Bot.prototype.start = function() {
 	this.mq = require('socket.io-client')('ws://127.0.0.1', {'force new connection': true});
 	this.mq.emit('add user', 'demo');
 };
+
+
+module.exports = Bot;

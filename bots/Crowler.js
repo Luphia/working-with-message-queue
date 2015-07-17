@@ -17,6 +17,7 @@ Bot.prototype.start = function() {
     this.mq.emit('add user', 'Crowler');
 };
 
+module.exports = Bot;
 /*
 var Crawler = require("crawler");
 var url = require('url');

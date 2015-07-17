@@ -17,6 +17,7 @@ Bot.prototype.start = function() {
     this.mq.emit('add user', 'Finder');
 };
 
+module.exports = Bot;
 /*
 var list;
 db.listData('products', function(e, d) {

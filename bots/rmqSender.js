@@ -17,6 +17,7 @@ Bot.prototype.start = function() {
 	this.mq.emit('add user', 'rmqSender');
 };
 
+module.exports = Bot;
 /*
 var rabbitMQ = amqp.createConnection({ host: '127.0.0.1' });
 var exchange;

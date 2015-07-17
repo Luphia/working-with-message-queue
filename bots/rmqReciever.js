@@ -19,6 +19,7 @@ Bot.prototype.start = function() {
 
 };
 
+module.exports = Bot;
 /*
 
 var amqp = require('amqp');
