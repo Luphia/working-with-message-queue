@@ -1,10 +1,10 @@
-# Bond
+# Working with message queue
 Communication Service for Dear Strangers
 
 ## Getting started
 ```shell
-$ git clone https://github.com/Luphia/Bond/
-$ cd Bond
+$ git clone https://github.com/Luphia/working-with-message-queue/
+$ cd working-with-message-queue
 $ npm install
 $ node .
 ```
